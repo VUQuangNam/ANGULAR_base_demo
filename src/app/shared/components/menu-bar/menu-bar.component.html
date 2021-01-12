@@ -1,0 +1,192 @@
+<div [hidden]="hideMenu">
+    <!-- Menu home -->
+    <div
+        id="mySidenav"
+        class="sidenav "
+        [style.text-align]="'center'"
+        *ngIf="!isShow"
+    >
+        <div class="avatar">
+            <img
+                src="assets/svg/logo.svg"
+                alt=""
+            >
+        </div>
+        <br><br>
+        <a
+            name="Home"
+            routerLink="/pages/home"
+            routerLinkActive="sideBarActive"
+        >
+            <img
+                id="home"
+                src="assets/svg/home.svg"
+                alt=""
+            >
+            <p> {{'HOME' | translate }}</p>
+        </a>
+        <a
+            name="Clients"
+            routerLink="/pages/clients"
+            routerLinkActive="sideBarActive"
+            (click)="clickClientMenu()"
+        >
+            <img
+                id="client"
+                src="assets/svg/client.svg"
+                alt=""
+            >
+            <p>{{'CLIENTS' | translate }}</p>
+        </a>
+        <a
+            name="Calendar"
+            routerLink="/pages/calendar"
+            routerLinkActive="sideBarActive"
+        >
+            <img
+                id="calendar"
+                src="assets/svg/calendar.svg"
+                alt=""
+            >
+            <p>{{'CALENDAR' | translate }}</p>
+        </a>
+        <a
+            name="Notifications"
+            routerLink="/pages/notifications"
+            routerLinkActive="sideBarActive"
+        >
+            <img
+                id="noti"
+                src="assets/svg/noti.svg"
+                alt=""
+            >
+            <p>{{'NOTI' | translate }}</p>
+        </a>
+        <a
+            name="Messages"
+            routerLink="/pages/message"
+            routerLinkActive="sideBarActive"
+        >
+            <img
+                id="chat"
+                src="assets/svg/chat.svg"
+                alt=""
+            >
+            <p>{{'MESSAGES' | translate }}</p>
+        </a>
+
+    </div>
+    <div
+        class="outsideShadow outsvg mx-auto arrow-up"
+        *ngIf="!isShow && patientId"
+    >
+        <img
+            (click)="showMenu()"
+            src="assets/svg/arrow-up.svg"
+            alt=""
+        >
+    </div>
+    <!-- Menu patients -->
+    <div
+        [hidden]="!isShow"
+        class="text-center menu-patients"
+    >
+        <img
+            src="assets/svg/logo.svg"
+            alt=""
+        >
+    </div>
+    <div
+        class="menu-button-down"
+        [hidden]="!isShow"
+    >
+        <div class="outsideShadow outsvg mx-auto">
+            <img
+                (click)="showMenu()"
+                src="assets/svg/arrow-down.svg"
+                alt=""
+            >
+        </div>
+    </div>
+
+    <div
+        id="tabs-vertical"
+        class="tab-item insideShadow"
+        [hidden]="!isShow"
+    >
+        <div class="avatar mx-auto text-center">
+        </div>
+        <a
+            name="History"
+            routerLink="/pages/profile/detail/{{patientId}}/history"
+            routerLinkActive="sideBarActive"
+        >
+            <img
+                id="history"
+                src="assets/svg/history.png"
+                alt=""
+            >
+            <p>{{'HISTORY' | translate }}</p>
+        </a>
+        <a
+            name="Exam"
+            routerLink="/pages/profile/detail/{{patientId}}/exam"
+            routerLinkActive="sideBarActive"
+        >
+            <img
+                id="exam"
+                src="assets/svg/exam.svg"
+                alt=""
+            >
+            <p>{{'EXAM' | translate }}</p>
+        </a>
+        <a
+            name="Diagnosis"
+            routerLink="/pages/profile/detail/{{patientId}}/diagnosis"
+            routerLinkActive="sideBarActive"
+        >
+            <img
+                id="diagnosis"
+                src="assets/svg/Diagnosis.svg"
+                alt=""
+            >
+            <p>{{'DIAGNOSIS' | translate }}</p>
+        </a>
+        <a
+            name="Plan"
+            routerLink="/pages/profile/detail/{{patientId}}/plan"
+            routerLinkActive="sideBarActive"
+        >
+            <img
+                id="plan"
+                src="assets/svg/plan.svg"
+                alt=""
+            >
+            <p>{{'PLAN' | translate }}</p>
+        </a>
+        <a
+            name="Report"
+            routerLink="/pages/profile/detail/{{patientId}}/report"
+            routerLinkActive="sideBarActive"
+        >
+            <img
+                id="report"
+                src="assets/svg/report.svg"
+                alt=""
+            >
+            <p>{{'REPORT' | translate }}</p>
+        </a>
+        <a
+            name="Invoice"
+            routerLink="/pages/profile/detail/{{patientId}}/invoice"
+            routerLinkActive="sideBarActive"
+        >
+            <img
+                id="invoice"
+                src="assets/svg/invoice.svg"
+                alt=""
+            >
+            <p>{{'INVOICE' | translate }}</p>
+        </a>
+    </div>
+</div>

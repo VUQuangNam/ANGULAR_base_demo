@@ -1,0 +1,27 @@
+@import "../../../../shared/scss/variables.scss";
+
+.row {
+    margin-bottom: 2em;
+    a {
+        color: $ci-color-dim-gray;
+    }
+}
+
+.title {
+    width: 100%;
+    color: $ci-color-ecko-blue;
+    font-size: 2.2em;
+}
+
+.container {
+    margin-top: -80px;
+}
+
+p {
+    color: $ci-color-faux-electric;
+    margin-top: 0.8em;
+}
+
+button {
+    outline: none;
+}
